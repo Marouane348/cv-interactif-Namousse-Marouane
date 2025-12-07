@@ -6,14 +6,23 @@
     <title>Marouane Namousse | Student Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="70">
+    <div class="animated-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
 
-    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">CV</a>
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="brand-text">MN</span>
+                <span class="brand-sub">cv</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-info ms-lg-3 px-4" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn-connect ms-lg-3" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -33,13 +42,30 @@
     <section id="home" class="d-flex align-items-center justify-content-center text-center">
         <div class="container">
             <div class="profile-img-container mb-4">
-                <img src="media/image.png" alt="Marouane Namousse" class="profile-img">
+                <div class="profile-frame">
+                    <img src="media/image.png" alt="Marouane Namousse" class="profile-img">
+                    <div class="profile-glow"></div>
+                </div>
             </div>
-            <h1 class="display-4 fw-bold">Marouane Namousse</h1>
-            <p class="lead text-info" id="typing-text"></p>
-            <div class="mt-4">
-                <a href="#about" class="btn btn-info btn-lg rounded-pill px-5">View Profile</a>
-                <a href="media/cv.txt" download class="btn btn-outline-light btn-lg rounded-pill px-5 ms-2">Download CV</a>
+            <div class="home-content">
+                <h1 class="display-3 fw-bold mb-3">Marouane <span class="text-gradient">Namousse</span></h1>
+                <div class="typing-container">
+                    <p class="lead" id="typing-text"></p>
+                    <span class="cursor"></span>
+                </div>
+                <div class="mt-5">
+                    <a href="#about" class="btn btn-primary btn-lg rounded-pill px-5 me-3">
+                        <i class="fas fa-user me-2"></i>View Profile
+                    </a>
+                    <a href="media/cv.txt" download class="btn btn-outline btn-lg rounded-pill px-5">
+                        <i class="fas fa-download me-2"></i>Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -47,32 +73,69 @@
     <section id="about" class="section-padding">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="fw-bold mb-4"><span class="text-info">About</span> Me</h2>
-                    <p class="text-secondary">
-                        I am a passionate computer science student currently studying at <strong>FSSM, Faculté des Sciences, Salé</strong>. 
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="section-header">
+                        <h2 class="section-title mb-4">About <span class="text-gradient">Me</span></h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <p class="about-text">
+                        I am a passionate IAP student currently studying at <strong>FSSM, Faculté des Sciences Semlalia</strong>. 
                         I have a strong foundation in software development and I am eager to solve complex problems through code. 
-                        I am constantly learning new technologies to build modern, responsive, and user-friendly applications.
+                        I am constantly learning new technologies to build modern, responsive, and user-friendly tools.
                     </p>
-                    <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-map-marker-alt text-info me-2"></i> marrakech, Morocco</li>
-                        <li><i class="fas fa-envelope text-info me-2"></i> m.namousse3038@uca.ac.ma</li>
-                        <li><i class="fas fa-university text-info me-2"></i> FSSM</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="info-card text-center p-4">
-                                <h3 class="fw-bold text-info">2</h3>
-                                <p class="mb-0">Years Studying</p>
+                    <div class="contact-info mt-4">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h6>Location</h6>
+                                <p>Marrakech, Morocco</p>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="info-card text-center p-4">
-                                <h3 class="fw-bold text-info">5+</h3>
-                                <p class="mb-0">Projects Done</p>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h6>Email</h6>
+                                <p>m.namousse3038@uca.ac.ma</p>
                             </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h6>University</h6>
+                                <p>FSSM, Faculté des Sciences Semlalia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3 class="stat-number" data-count="2">0</h3>
+                            <p class="stat-text">Years Studying</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h3 class="stat-number" data-count="1">0</h3>
+                            <p class="stat-text">Projects Done</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="stat-number" data-count="4">0</h3>
+                            <p class="stat-text">Technologies</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h3 class="stat-number" data-count="1">0</h3>
+                            <p class="stat-text">Certifications</p>
                         </div>
                     </div>
                 </div>
@@ -80,41 +143,67 @@
         </div>
     </section>
 
-    <section id="education" class="section-padding bg-darker">
+    <section id="education" class="section-padding bg-section">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">Education & <span class="text-info">Experience</span></h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h4 class="mb-4"><i class="fas fa-graduation-cap text-info me-2"></i> Education</h4>
-                    <div class="timeline-box">
-                        <div class="timeline-item">
-                            <span class="date">2025 - Present</span>
-                            <h5>IAP-S3 Student</h5>
-                            <p class="text-info sm-text">FSSM, Faculté des Sciences, Salé</p>
-                            <p class="text-secondary">Specializing in cybersecurity.</p>
+            <div class="section-header text-center">
+                <h2 class="section-title mb-4">Education & <span class="text-gradient">Experience</span></h2>
+                <p class="section-subtitle">My academic journey and practical experience</p>
+                <div class="section-line mx-auto"></div>
+            </div>
+            
+            <div class="timeline-wrapper">
+                <div class="timeline">
+                    <div class="timeline-column">
+                        <div class="timeline-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Education</h4>
                         </div>
-                        <div class="timeline-item">
-                            <span class="date">2022 - 2023</span>
-                            <h5>Baccalaureate</h5>
-                            <p class="text-info sm-text">High School Name</p>
-                            <p class="text-secondary">Major in Physical Sciences.</p>
+                        <div class="timeline-items">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2025 - Present</div>
+                                <div class="timeline-content">
+                                    <h5>IAP-S3 Student</h5>
+                                    <p class="timeline-sub">in FSSM, Faculté des Sciences Semlalia</p>
+                                    <p>Specializing in cybersecurity with focus on network security and ethical hacking.</p>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022 - 2023</div>
+                                <div class="timeline-content">
+                                    <h5>Baccalaureate</h5>
+                                    <p class="timeline-sub">takadom High School</p>
+                                    <p>Major in Physical Sciences.</p>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="mb-4"><i class="fas fa-briefcase text-info me-2"></i> Experience</h4>
-                    <div class="timeline-box">
-                        <div class="timeline-item">
-                            <span class="date">Summer 2024</span>
-                            <h5>Amateur Web Development</h5>
-                            <p class="text-info sm-text">no Experience with companies</p>
-                            <p class="text-secondary">Creating web pages for fun.</p>
+                    
+                    <div class="timeline-column">
+                        <div class="timeline-header">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Experience</h4>
                         </div>
-                        <div class="timeline-item">
-                            <span class="date">2025 - Present</span>
-                            <h5>academic web development study</h5>
-                            <p class="text-info sm-text">beginning of dev web academic study</p>
-                            <p class="text-secondary">Creating my CV.</p>
+                        <div class="timeline-items">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Summer 2024</div>
+                                <div class="timeline-content">
+                                    <h5>Amateur Web Development</h5>
+                                    <p class="timeline-sub">No Experience with companies</p>
+                                    <p>Creating responsive web pages and learning modern web technologies independently.</p>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2025 - Present</div>
+                                <div class="timeline-content">
+                                    <h5>Academic Web Development Study</h5>
+                                    <p class="timeline-sub">Beginning of dev web academic study</p>
+                                    <p>Formal education in web development principles and creating CV projects like this ONE.</p>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,82 +213,172 @@
 
     <section id="skills" class="section-padding">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">Technical <span class="text-info">Skills</span></h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <label class="mb-2">HTML5 / CSS3</label>
-                    <div class="progress" role="progressbar">
-                        <div class="progress-bar bg-info" style="width: 0%" data-width="95%">95%</div>
+            <div class="section-header text-center">
+                <h2 class="section-title mb-4">Technical <span class="text-gradient">Skills</span></h2>
+                <p class="section-subtitle">My proficiency in various technologies and tools</p>
+                <div class="section-line mx-auto"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5 / CSS3</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95">
+                            <span class="skill-percentage">95%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <label class="mb-2">JavaScript (ES6+)</label>
-                    <div class="progress" role="progressbar">
-                        <div class="progress-bar bg-info" style="width: 0%" data-width="85%">85%</div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript (ES6+)</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85">
+                            <span class="skill-percentage">85%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <label class="mb-2">Bootstrap 5</label>
-                    <div class="progress" role="progressbar">
-                        <div class="progress-bar bg-info" style="width: 0%" data-width="90%">90%</div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-bootstrap"></i>
+                        <span>Bootstrap 5</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90">
+                            <span class="skill-percentage">90%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <label class="mb-2">C / C++</label>
-                    <div class="progress" role="progressbar">
-                        <div class="progress-bar bg-info" style="width: 0%" data-width="80%">80%</div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <span>C / C++</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80">
+                            <span class="skill-percentage">80%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <label class="mb-2">PHP / MySQL</label>
-                    <div class="progress" role="progressbar">
-                        <div class="progress-bar bg-info" style="width: 0%" data-width="70%">70%</div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-php"></i>
+                        <span>PHP / MySQL</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70">
+                            <span class="skill-percentage">70%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <label class="mb-2">Git / GitHub</label>
-                    <div class="progress" role="progressbar">
-                        <div class="progress-bar bg-info" style="width: 0%" data-width="75%">75%</div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git / GitHub</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75">
+                            <span class="skill-percentage">75%</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section-padding bg-darker">
+    <section id="projects" class="section-padding bg-section">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">My <span class="text-info">Portfolio</span></h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Lorem, ipsum dolor.</h5>
-                            <span class="badge bg-secondary">lorem</span>
-                            <span class="badge bg-info text-dark">Lorem, ipsum.</span>
-                            <p class="card-text mt-3 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia facere dignissimos illum eum.</p>
-                            <a href="#" class="btn btn-outline-info btn-sm mt-2">Lorem, ipsum. <i class="fab fa-github"></i></a>
+            <div class="section-header text-center">
+                <h2 class="section-title mb-4">My <span class="text-gradient">Portfolio</span></h2>
+                <p class="section-subtitle">A showcase of my recent projects and work</p>
+                <div class="section-line mx-auto"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tags">
+                            <span class="project-tag">Lorem, ipsum.</span>
+                            <span class="project-tag">lorem</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h5 class="project-title">Lorem, ipsum.</h5>
+                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis harum commodi culpa in accusantium?</p>
+                        <div class="project-tech">
+                            <span>lorem</span>
+                            <span>lorem</span>
+                            <span>lorem</span>
+                            <span>lorem</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Lorem, ipsum dolor.</h5>
-                            <span class="badge bg-secondary">Lorem, ipsum.</span>
-                            <span class="badge bg-info text-dark">Lorem, ipsum.</span>
-                            <p class="card-text mt-3 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores porro nam dolore iure eaque.</p>
-                            <a href="#" class="btn btn-outline-info btn-sm mt-2">Lorem, ipsum.<i class="fas fa-external-link-alt"></i></a>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tags">
+                            <span class="project-tag">Lorem, ipsum.</span>
+                            <span class="project-tag">lorem</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h5 class="project-title">Lorem, ipsum dolor.</h5>
+                        <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel qui necessitatibus praesentium laboriosam minima.</p>
+                        <div class="project-tech">
+                            <span>lorem</span>
+                            <span>lorem</span>
+                            <span>Lorem, ipsum.</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Lorem, ipsum dolor.</h5>
-                            <span class="badge bg-secondary">Lorem, ipsum.</span>
-                            <span class="badge bg-info text-dark">Lorem, ipsum dolor.</span>
-                            <p class="card-text mt-3 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsam magnam rem sapiente atque.</p>
-                            <a href="#" class="btn btn-outline-info btn-sm mt-2">Lorem, ipsum.<i class="fab fa-github"></i></a>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-tags">
+                            <span class="project-tag">lorem</span>
+                            <span class="project-tag">lorem</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h5 class="project-title">Lorem, ipsum dolor.</h5>
+                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga saepe officia explicabo sed. Repellat.</p>
+                        <div class="project-tech">
+                            <span>lorem</span>
+                            <span>lorem</span>
+                            <span>lorem</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -207,28 +386,89 @@
         </div>
     </section>
 
-    <section class="section-padding text-center">
+    <section id="interests" class="section-padding">
         <div class="container">
-            <h4 class="mb-4">Interests & Hobbies</h4>
-            <div class="d-flex justify-content-center gap-4 flex-wrap">
-                <div class="hobby-item"><i class="fas fa-code fa-2x text-info mb-2"></i><p>Coding</p></div>
-                <div class="hobby-item"><i class="fas fa-gamepad fa-2x text-info mb-2"></i><p>Gaming</p></div>
-                <div class="hobby-item"><i class="fas fa-camera fa-2x text-info mb-2"></i><p>Photography</p></div>
-                <div class="hobby-item"><i class="fas fa-book fa-2x text-info mb-2"></i><p>Reading</p></div>
+            <div class="section-header text-center">
+                <h2 class="section-title mb-4">Interests & <span class="text-gradient">Hobbies</span></h2>
+                <p class="section-subtitle">What I enjoy beyond programming</p>
+                <div class="section-line mx-auto"></div>
+            </div>
+            
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h5>Coding</h5>
+                    <p>Exploring new frameworks and solving algorithmic challenges</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h5>Gaming</h5>
+                    <p>Strategy games and coding-related puzzle games</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h5>Photography</h5>
+                    <p>Capturing moments and learning photo editing techniques</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h5>Reading</h5>
+                    <p>Tech blogs, science fiction, and personal development</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="text-center py-4 bg-darker border-top border-secondary">
+    <footer id="contact" class="footer">
         <div class="container">
-            <div class="mb-3">
-                <a href="https://www.linkedin.com/in/Marouane348/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Marouane348" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/marouane34825" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Marouane Namousse</h3>
+                    <p>student at Fssm IAP-S3</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/Marouane348/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Marouane348" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/marouane34825" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:m.namousse3038@uca.ac.ma" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Marrakech, Morocco</p>
+                    <p><i class="fas fa-university me-2"></i> FSSM, Faculté des Sciences semlalia</p>
+                </div>
             </div>
-            <p class="text-secondary mb-0">&copy; 2025 Marouane Namousse. All Rights Reserved.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Marouane Namousse. All Rights Reserved.</p>
+                <p>Built with <i class="fas fa-heart text-danger"></i> using HTML, CSS & JavaScript</p>
+            </div>
         </div>
     </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
